@@ -35,6 +35,8 @@ CREATE TABLE managers (
 	PRIMARY KEY (dept_no, emp_no)
 );
 
+DROP TABLE titles CASCADE;
+
 CREATE TABLE dept_emp(
 	dept_no VARCHAR NOT NULL,
 	emp_no INT NOT NULL,
@@ -50,6 +52,10 @@ CREATE TABLE titles(
 	title VARCHAR NOT NULL,
 	from_date DATE NOT NULL,
 	to_date DATE NOT NULL,
-	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+
 	PRIMARY KEY (emp_no)
 );
+
+select * from employees;
+select * from dept_emp;
+select * from titles;
